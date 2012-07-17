@@ -1,0 +1,39 @@
+print  =  this prints text to the screen
+
+#  = comments out
+
+#Math Operators
++ plus
+- minus
+/ slash
+* asterisk
+% percent
+< less-than
+> greater-than
+<= less-than-equal
+>= greater-than-equal
+
+=   assigns the value on the right to a variable on the left
+
+==  ) tests if two things have the same value
+
+""  = makes text a string
+''  = use single-qutoe inside a string that has double-quotes
+""" = used to escape string double quotes
+
+%s, %r, and %d  theste are formaters.  
+%r is best for debugging
+
+They tell Python to take the variable on the right, and put it in to replace the %s with its value.
+
+round()  function that rounds a number to the closest round number. 
+
+%  seperates a string from a list of variables
+
+\n put a new line character into the string at that point
+
+\\  hese two characters will print just one back-slash
+
+
+
+
