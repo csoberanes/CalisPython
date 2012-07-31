@@ -37,26 +37,26 @@ def cross_river():
             dead("Looks like you don't have any gold coins.  Come back when you can afford it sonny. ")
         elif next == "swim" and river_crossed:
         	print "swimming is always a good solution.  you avoided the dragons, goblins and ferrry fare. "
-        potion_store()
+        	potion_store()
         else:
-            print "speak english dummy"
+            print "speak english dummy."
             
 def soup_time():
 	print "The soup looks good but there is a dirty spoon."
 	print "Do you use the spoon or slurp from the bowl?"
 	print "spoon or slurp?"
-    
-    next = raw_input("> ")     
-    
-    if next == "spoon":
-    	print "that's gross, you just got samonella or something similar. You had better get a potion from the potion store."
-    	print "but first you need to cross the river."
-    	cross_river():
-    elif next == "slurp":
-    	print = "that a boy slurp that soup! umm..You Win!"
-    	exit(0)
-    else:
-    	print "no soup for you!"
+	
+	next = raw_input("> ")
+	
+	if next == "spoon":
+		print "that's gross, you just got samonella or something similar. You had better get a potion from the potion store."
+		print "but first you need to cross the river."
+		cross_river()
+	elif next == "slurp":
+		print "that a boy slurp that soup! umm..You Win!"
+		exit(0)
+	else:
+		print "no soup for you!"
     	dead ("Guess you starve to death!")
             
 def dead(why):
@@ -76,7 +76,7 @@ def start():
         cross_river()
     elif next == "soup":
         soup_time()
-        elif next == "pizza":
+    elif next == "pizza":
         print "That pizza had poisonus mushrooms on it. you better get to the potion store across the river!"
         cross_river()
     else:
