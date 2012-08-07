@@ -1,11 +1,29 @@
-and
-del
-from
-not
-while
+and: Called Logical AND operator. If both the operands are true then then condition becomes true.
+
+del: The del statement works by unbinding the name, removing it from the set of names known to the Python interpreter. 
+	If this variable was the last remaining reference to an object, the object will be removed from memory. 
+	If, on the other hand, other variables still refer to this object, the object won't be deleted.
+
+from: import modules
+
+not: not has a lower priority than non-Boolean operators, 
+	so not a == b is interpreted as not (a == b), and a == not b is a syntax error.
+
+while: The while loop continues until the expression becomes false. 
+	The expression has to be a logical expression and must return either a true or a false value
+		while expression:
+   			statement(s)
+   			
 as
-elif
-global
+
+elif: The keyword ‘elif‘ is short for ‘else if’, and is useful to avoid excessive indentation. 
+	An if ... elif ... elif ... sequence is a substitute for the switch or case statements found in other languages.
+	
+global: If you want to assign a value to a name defined outside the function, 
+	then you have to tell Python that the name is not local, but it is global.
+ 	We do this using the global statement. It is impossible to assign a value to a variable defined outside a 
+ 	function without the global statement. 
+ 	
 or
 with
 assert
