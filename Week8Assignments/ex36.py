@@ -3,15 +3,15 @@ from sys import exit
 def potion_store():
     print "The store is full of potions. Do you take potion 1, 2, or 3?"
 
-    next = raw_input("> ")
+    potion_number = int(raw_input(">"))
    
-    if potion_number == "1":
+    if potion_number == 1:
         print "You turn into a frog. You lose.  Who knows, maybe a princess will kiss you...maybe"
         exit(0)
-    elif potion_number == "2":
+    elif potion_number == 2:
         print "Wrong potion, you chose a death potion"
         dead("life sucks and then you die")
-    elif  potion_number == "3":
+    elif  potion_number == 3:
     	print " You chose correctly, You win the game!"
     	exit(0)
     else:
@@ -22,21 +22,32 @@ def cross_river():
     print "There is a goblin under the bridge"
     print "There is a ferry on the river banks that costs 5 gold coins to cross"
     print "How are you going to cross the river?"
-    river_crossed = False
+    print "Enter: slay the dragon, kill the goblin, take the ferry, or swim"
+    goblin_killed = False
 
     while True:
         next = raw_input("> ")
 
         if next == "slay the dragon":
             dead("Your toast, the dragon chared you to a crisp.")
-        elif next == "kill the goblin" and not river_crossed:
+        elif next == "kill the goblin" and not goblin_killed:
             print "You killed the goblin and took his gold.  Looks like you can take the ferry now"
             print "What do you want to do?"
-            river_crosed = True
-        elif next == "take the ferry" and not river_crossed:
-            dead("Looks like you don't have any gold coins.  Come back when you can afford it sonny. ")
-        elif next == "swim" and river_crossed:
-        	print "swimming is always a good solution.  you avoided the dragons, goblins and ferrry fare. "
+            print "Enter: slay the dragon, take the ferry, or swim"
+            goblin_killed = True
+        elif next == "kill the goblin" and goblin_killed:
+        	print "You already killed the goblin."
+        	print "What do you want to do?"
+        elif next == "take the ferry" and not goblin_killed:
+            dead("Looks like you don't have any gold coins.  the ferry man throws you overboard and you drown ")
+        elif next == "take the ferry" and goblin_killed:
+        	print "looks like you have enough gold to cross friend. The potion store is straight ahead "
+        	potion_store()
+        elif next == "swim" and not goblin_killed:
+        	dead("You swim by the goblin and he eats you...")
+        elif next == "swim" and goblin_killed:
+        	print "swimming is always a good solution.  you killed the goblin, and avoided the dragon and ferry fare."
+        	print "straigt ahead to the potion store."
         	potion_store()
         else:
             print "speak english dummy."
